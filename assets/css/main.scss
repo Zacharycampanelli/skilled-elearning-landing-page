@@ -15,6 +15,8 @@ body {
 
 main {
   background: $gradient-background;
+
+
 }
 
 h1,
@@ -68,8 +70,12 @@ header {
   justify-content: space-between;
   align-items: center;
 
+
+  @include screen-md {
+    margin: 30px 30px 60px;
+  }
   img {
-    width: 20vw;
+    width: 14vw;
   }
 
 }
@@ -77,13 +83,33 @@ header {
 #main-content {
   width: 90vw;
   margin: 0 auto;
-  margin-bottom: 1.75rem;
+  margin-bottom: 2.75rem;
+
+  @include screen-md {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: 0 0 18rem 2rem;
+  }
 }
 
 .member_img {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  width: 95vw;
+  height: 95vw;
+  background-image: url('../images/image-hero-mobile.png');
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include screen-md {
+    background-image: url('../images/image-hero-tablet.png');
+    position: absolute;
+    right: -43%;
+    top: -5%;
+
+  }
 }
 
 .courses {
@@ -93,22 +119,43 @@ header {
   align-items: center;
   justify-content: center;
 
+  @include screen-md {
+    margin-top: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
   &_heading {
     background: $gradient-orange-to-pink;
     width: 90vw;
-    height: 14vh;
+    height: 28vh;
     margin: 0 auto 40px;
     border-radius: 15px;
     padding: 30px 35px;
+
+    @include screen-md {
+        width: 45vw;
+        padding: 3.5rem 3rem;
+        margin-bottom: 6rem;
+
+    }
   }
 
   &_course {
-    margin: 25px auto;
+    margin: 28px auto;
     padding: 42px;
     width: 90vw;
+    height: 28vh;
     background: $white;
     border-radius: 15px;
     position: relative;
+    @include screen-md {
+        width: 45vw;
+        padding: 36px;
+        margin-top: 0rem;
+        margin-bottom: 6rem;
+    }
 
     &_icon {
       width: 56px;
@@ -128,9 +175,14 @@ footer {
   justify-content: space-between;
   align-items: center;
 
+  @include screen-md {
+    height: 15vh;
+  }
+
   img {
-    width: 20vw;
+    width: 14vw;
     margin: 1.5rem;
+
   }
 
 }

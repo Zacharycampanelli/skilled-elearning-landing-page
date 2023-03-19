@@ -1,6 +1,6 @@
 .button-1 {
     @include font-setup($body-sm-size, $body-md-height);
-    @include button_setup(140px, 45px, $white, $navy, 30px);
+    @include button_setup(140px, 40px, $white, $navy, 30px);
 
     &:hover {
       opacity: 0.7;

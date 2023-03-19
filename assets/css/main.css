@@ -52,7 +52,7 @@ input {
   font-size: 16px;
   line-height: 28px;
   width: 140px;
-  height: 45px;
+  height: 40px;
   color: rgb(255, 255, 255);
   background: rgb(19, 24, 63);
   border-radius: 30px;
@@ -96,7 +96,7 @@ body {
 }
 
 main {
-  background: linear-gradient(rgb(255, 255, 255), rgb(240, 241, 255));
+  background: linear-gradient(rgb(255, 255, 255), rgb(213, 218, 255));
 }
 
 h1,
@@ -154,20 +154,46 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (min-width: 600px) {
+  header {
+    margin: 30px 30px 60px;
+  }
+}
 header img {
-  width: 20vw;
+  width: 14vw;
 }
 
 #main-content {
   width: 90vw;
   margin: 0 auto;
-  margin-bottom: 1.75rem;
+  margin-bottom: 2.75rem;
+}
+@media screen and (min-width: 600px) {
+  #main-content {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: 0 0 18rem 2rem;
+  }
 }
 
 .member_img {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  width: 95vw;
+  height: 95vw;
+  background-image: url("../images/image-hero-mobile.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 600px) {
+  .member_img {
+    background-image: url("../images/image-hero-tablet.png");
+    position: absolute;
+    right: -43%;
+    top: -5%;
+  }
 }
 
 .courses {
@@ -177,21 +203,45 @@ header img {
   align-items: center;
   justify-content: center;
 }
+@media screen and (min-width: 600px) {
+  .courses {
+    margin-top: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+}
 .courses_heading {
   background: linear-gradient(rgb(255, 111, 72), rgb(240, 42, 166));
   width: 90vw;
-  height: 14vh;
+  height: 28vh;
   margin: 0 auto 40px;
   border-radius: 15px;
   padding: 30px 35px;
 }
+@media screen and (min-width: 600px) {
+  .courses_heading {
+    width: 45vw;
+    padding: 3.5rem 3rem;
+    margin-bottom: 6rem;
+  }
+}
 .courses_course {
-  margin: 25px auto;
+  margin: 28px auto;
   padding: 42px;
   width: 90vw;
+  height: 28vh;
   background: rgb(255, 255, 255);
   border-radius: 15px;
   position: relative;
+}
+@media screen and (min-width: 600px) {
+  .courses_course {
+    width: 45vw;
+    padding: 36px;
+    margin-top: 0rem;
+    margin-bottom: 6rem;
+  }
 }
 .courses_course_icon {
   width: 56px;
@@ -209,7 +259,12 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (min-width: 600px) {
+  footer {
+    height: 15vh;
+  }
+}
 footer img {
-  width: 20vw;
+  width: 14vw;
   margin: 1.5rem;
 }/*# sourceMappingURL=main.css.map */
