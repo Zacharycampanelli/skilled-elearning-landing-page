@@ -1,4 +1,11 @@
-@mixin font-size($size, $line_height) {
-    font-size: $size;
-    line-height: $line_height; 
+@mixin font_setup($size, $line_height) {
+  font-size: $size;
+  line-height: $line_height;
+}
+@mixin button_setup($width, $height, $color, $background-color, $border-radius) {
+  width: $width;
+  height: $height;
+  color: $color;
+  background: $background-color;
+  border-radius: $border-radius;
 }

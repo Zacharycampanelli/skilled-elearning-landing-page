@@ -4,9 +4,9 @@ $gray: rgb(131, 134, 154);
 $warm-pink: rgb(247, 71, 128);
 $dull-pink: rgb(255, 167, 195);
 $white: rgb(255, 255, 255);
-$gradient-orange-to-pink: linear-gradient(rgb(240, 42, 166), rgb(255, 111, 72));
+$gradient-orange-to-pink: linear-gradient(rgb(255, 111, 72), rgb(240, 42, 166));
 $gradient-blue-to-pink: linear-gradient(rgb(72, 81, 255), rgb(240, 42, 166));
-
+$gradient-background: linear-gradient(rgb(255, 255, 255),rgb(240, 241, 255));
 $heading-xl-size: 56px;
 $heading-lg-size: 40px;
 $heading-md-size: 32px;
@@ -18,6 +18,9 @@ $heading-xl-height: 70px;
 $heading-lg-height: 51px;
 $heading-md-height: 40px;
 $heading-sm-height: 28px;
-$body-height: 28px;
+$body-md-height: 28px;
+$body-sm-height: 26px;
 
-
+$font-weight-md: 500;
+$font-weight-lg: 700;
+$font-weight-xl: 800;

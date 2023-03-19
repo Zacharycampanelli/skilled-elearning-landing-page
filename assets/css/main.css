@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap");
 *, *:before, *:after {
   box-sizing: border-box;
 }
 
-html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+html, body, div, span, button, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -46,4 +46,160 @@ table {
 input {
   -webkit-appearance: none;
   border-radius: 0;
+}
+
+html, body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+main {
+  background: linear-gradient(rgb(255, 255, 255), rgb(240, 241, 255));
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+}
+
+h4,
+button, a {
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+  color: rgb(131, 134, 154);
+  padding-bottom: 1.5rem;
+}
+
+header {
+  display: flex;
+  margin: 10px 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  width: 20vw;
+}
+header .button {
+  font-size: 16px;
+  line-height: 28px;
+  width: 140px;
+  height: 45px;
+  color: rgb(255, 255, 255);
+  background: rgb(19, 24, 63);
+  border-radius: 30px;
+}
+header .button:hover {
+  opacity: 0.7;
+}
+
+#main-content {
+  width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 1.75rem;
+}
+#main-content h1 {
+  font-size: 40px;
+  line-height: 51px;
+  margin-bottom: 32px;
+  color: rgb(19, 24, 63);
+}
+#main-content .button {
+  font-size: 16px;
+  line-height: 28px;
+  width: 167px;
+  height: 56px;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(rgb(255, 111, 72), rgb(240, 42, 166));
+  border-radius: 30px;
+}
+#main-content .button:hover {
+  opacity: 0.7;
+}
+
+.member_img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.courses {
+  margin-top: -20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.courses_heading {
+  background: linear-gradient(rgb(255, 111, 72), rgb(240, 42, 166));
+  width: 90vw;
+  height: 14vh;
+  margin: 0 auto 40px;
+  border-radius: 15px;
+  padding: 30px 35px;
+}
+.courses_heading h2 {
+  font-size: 24px;
+  line-height: 28px;
+  color: rgb(255, 255, 255);
+}
+.courses_course {
+  margin: 25px auto;
+  padding: 42px;
+  width: 90vw;
+  background: rgb(255, 255, 255);
+  border-radius: 15px;
+  position: relative;
+}
+.courses_course h3 {
+  font-size: 18px;
+  line-height: 28px;
+  color: rgb(19, 24, 63);
+}
+.courses_course_icon {
+  width: 56px;
+  position: absolute;
+  top: -16%;
+  left: 10%;
+  margin-bottom: 10px;
+}
+.courses_course a {
+  color: rgb(247, 71, 128);
+  padding: 20px 0;
+}
+.courses_course a:visited, .courses_course a:link {
+  text-decoration: none;
+}
+
+footer {
+  background: rgb(19, 24, 63);
+  height: 12vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer img {
+  width: 20vw;
+  margin: 1.5rem;
+}
+footer .button {
+  font-size: 16px;
+  line-height: 28px;
+  width: 140px;
+  height: 48px;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(rgb(72, 81, 255), rgb(240, 42, 166));
+  border-radius: 30px;
+  margin: 1.5rem;
+}
+footer .button:hover {
+  opacity: 0.6;
 }/*# sourceMappingURL=main.css.map */
