@@ -5,7 +5,6 @@
 @import 'buttons';
 @import 'media';
 
-
 body {
   font-family: $jakarta;
   width: 100%;
@@ -15,8 +14,6 @@ body {
 
 main {
   background: $gradient-background;
-
-
 }
 
 h1,
@@ -35,23 +32,51 @@ h1 {
   @include font-setup($heading-lg-size, $heading-lg-height);
   margin-bottom: 32px;
   color: $navy;
+
+  @include screen-lg {
+    margin: 42px 0 32px;
+  }
+
+  @include screen-xxl {
+    @include font-setup($heading-xl-size, $heading-xl-height);
+    width: 34vw;
+  }
 }
 
 h2 {
   @include font-setup($heading-sm-size, $heading-sm-height);
   color: $white;
+
+  @include screen-xxl {
+    @include font-setup($heading-md-size, $heading-md-height);
+  }
 }
 
 h3 {
   @include font-setup($body-md-size, $heading-sm-height);
   color: $navy;
+  margin: 1rem 0;
+
+  @include screen-xxl {
+    @include font-setup($heading-sm-size, $heading-sm-height);
+  }
 }
 
 p {
   @include font-setup($body-sm-size, $body-sm-height);
   font-weight: $font-weight-md;
   color: $gray;
-  padding-bottom: 1.5rem;
+  max-height: 110px;
+  padding-bottom: 1.8rem;
+
+  @include screen-lg {
+    margin-bottom: 0rem;
+  }
+
+  @include screen-xxl {
+    @include font-setup($body-md-size, $body-md-height);
+    margin-bottom: 2rem;
+  }
 }
 
 a {
@@ -66,108 +91,170 @@ a:link {
 
 header {
   display: flex;
-  margin: 10px 10px 20px;
+  margin: 30px 10px 30px;
   justify-content: space-between;
   align-items: center;
 
-
-  @include screen-md {
-    margin: 30px 30px 60px;
+  @include screen-lg {
+    margin: 30px 40px 60px;
   }
+
+  @include screen-xxl {
+    margin: 2rem 8rem 11rem;
+  }
+
   img {
-    width: 14vw;
+    width: 6rem;
   }
 
+  .button-1 {
+    @include screen-xxl {
+      height: 56px;
+      width: 167px;
+    }
+    
+  }
 }
 
 #main-content {
   width: 90vw;
-  margin: 0 auto;
+  margin: 0 25px;
   margin-bottom: 2.75rem;
+  
 
-  @include screen-md {
+  @include screen-lg {
     display: flex;
     flex-direction: column;
     width: 50vw;
-    margin: 0 0 18rem 2rem;
+    margin: 0 0 11rem 2rem;
+  }
+
+  @include screen-xxl {
+    width: 30vw;
+    margin: 0 8rem 15rem 8rem;
   }
 }
 
 .member_img {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  margin: 10px auto;
   width: 95vw;
   height: 95vw;
   background-image: url('../images/image-hero-mobile.png');
   background-position: center;
   background-repeat: no-repeat;
 
-  @include screen-md {
+  @include screen-lg {
     background-image: url('../images/image-hero-tablet.png');
     position: absolute;
     right: -43%;
-    top: -5%;
+    top: -10%;
+  }
 
+  @include screen-xxl {
+    background-image: url('../images/image-hero-desktop.png');
+    top: -38%;
+    right: -35%;
   }
 }
 
 .courses {
-  margin-top: -20px;
+  margin: -20px 0 45px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  @include screen-md {
-    margin-top: 1rem;
+  @include screen-lg {
+    margin: 1rem 0px;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 2rem;
-}
+  }
+
+  @include screen-xxl {
+    padding: 8rem 8rem 2rem;
+    margin-top: -10%;
+  }
+
+  .course_card {
+    color: black;
+  }
+
+  p {
+    @include screen-lg {
+        margin-bottom: 1rem;
+    }
+
+    @include screen-xxl {
+        margin: 2rem 0 3rem;
+    }
+  }
 
   &_heading {
-    background: $gradient-orange-to-pink;
     width: 90vw;
-    height: 28vh;
-    margin: 0 auto 40px;
-    border-radius: 15px;
+    height: 14vh;
     padding: 30px 35px;
+    border-radius: 15px;
+    box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+    background: $gradient-orange-to-pink;
+    margin: 0 auto 40px;
 
-    @include screen-md {
-        width: 45vw;
-        padding: 3.5rem 3rem;
-        margin-bottom: 6rem;
+    @include screen-lg {
+      height: 30vh;
+      width: 43vw;
+      padding: 3.5rem 3rem;
+      margin-bottom: 6rem;
+    }
 
+    @include screen-xxl {
+        width: 26vw;
+        height: 23vw;
+      padding: 4rem 2.5rem;
     }
   }
 
   &_course {
-    margin: 28px auto;
-    padding: 42px;
-    width: 90vw;
-    height: 28vh;
-    background: $white;
+    height: 30vh;
+    padding: 32px;
+    margin: 28px 10px;
+    box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+
     border-radius: 15px;
+    background: $white;
     position: relative;
-    @include screen-md {
-        width: 45vw;
-        padding: 36px;
-        margin-top: 0rem;
-        margin-bottom: 6rem;
+
+    @include screen-lg {
+      width: 43vw;
+      height: 35vw;
+      padding: 36px;
+      margin-top: 0rem;
+      margin-bottom: 6rem;
+    }
+
+    @include screen-xxl {
+      width: 26vw;
+      height: 23vw;
+      
     }
 
     &_icon {
       width: 56px;
       position: absolute;
-      top: -16%;
+      top: -10%;
       left: 10%;
       margin-bottom: 10px;
+
+      @include screen-lg {
+        top: -8%;
+      }
     }
   }
 }
 
 footer {
+
   background: $navy;
   height: 12vh;
   width: 100vw;
@@ -175,14 +262,22 @@ footer {
   justify-content: space-between;
   align-items: center;
 
-  @include screen-md {
-    height: 15vh;
+  @include screen-lg {
+    height: 13vh;
+  }
+
+  @include screen-xxl {
+    padding: 0 8rem;
   }
 
   img {
-    width: 14vw;
-    margin: 1.5rem;
-
+    width: 6rem;
+    margin: 40px;
   }
 
+  .button-3 {
+    @include screen-lg {
+        margin: 40px;
+    }
+  }
 }
